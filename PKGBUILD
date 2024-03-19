@@ -7,7 +7,7 @@ pkgname='ros-noetic-rqt-nav-view'
 pkgver='0.5.7'
 _pkgver_patch=0
 arch=('any')
-pkgrel=2
+pkgrel=3
 license=('BSD')
 
 ros_makedepends=(
@@ -36,9 +36,10 @@ depends=(
 	${ros_depends[@]}
 )
 
-_dir="rqt_nav_view-${pkgver}"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_nav_view/archive/${pkgver}.tar.gz")
-sha256sums=('93ee15ffdac90401e7b7ba1386f4b5a5ee7aa9c7e7b55227b7763dc21cf0a7cc')
+_commit="3df965e03649c459d118d9cbbbaf4cc1f5f22196"
+_dir="rqt_nav_view-${_commit}"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_nav_view/archive/${_commit}.tar.gz")
+sha256sums=('8191116346b08146b1cd7bb1f92914f310ef1fe59bb340686d44dc1f52a10a6f')
 
 build() {
 	# Use ROS environment variables.
